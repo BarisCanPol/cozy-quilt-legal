@@ -16,7 +16,7 @@
         <a href="terms.html">Terms</a>
       </nav>
       <p class="lang-switch"><a href="#tr">Türkçe</a> · <a href="#en">English</a></p>
-      <p class="meta">Effective / yürürlük: 18 September 2026 · package <code>com.cozyquilt.app</code></p>
+      <p class="meta">Effective / yürürlük: 2 November 2026 · package <code>com.cozyquilt.app</code></p>
     </header>
     <main>
       <section id="tr">
@@ -31,10 +31,13 @@
         <p>
           Cozy Quilt tek oyunculu bir yerleştirme bulmacasıdır. İlerleme ve ayarlar
           yalnızca cihazınızda saklanır. Uygulama bu veriyi sunucularımıza göndermez.
+          Oyunu geliştirmek için anonim kullanım verisi toplanır (bkz. 6. bölüm);
+          bunu Ayarlar’dan kapatabilirsiniz.
         </p>
         <ul>
           <li>Hesap, kayıt veya giriş yoktur.</li>
-          <li>Analitik / çökme raporu SDK’sı yoktur.</li>
+          <li>Kullanım analitiği için Google Firebase Analytics kullanılır; çökme raporu SDK’sı yoktur.</li>
+          <li>Reklam kimliği (Advertising ID) toplanmaz.</li>
           <li>Reklam SDK’sı yoktur; uygulama içi satın alınabilir ürün şu an sunulmaz.</li>
           <li>Konum, rehber, fotoğraf veya mikrofon erişimi yoktur.</li>
         </ul>
@@ -44,7 +47,7 @@
         <ul>
           <li>Bölüm / seviye ilerlemesi (tamamlanan seviyeler, en iyi hamle, başarımlar)</li>
           <li>Günlük bulmaca geçmişi (tekrarı önlemek için imza ve tarihler)</li>
-          <li>Tercihler (titreşim, tema, dil)</li>
+          <li>Tercihler (titreşim, tema, dil, kullanım verisi paylaşımı)</li>
           <li>Tek aktif bölüm için ortada bırakılan oyun anlık görüntüsü</li>
         </ul>
         <p>
@@ -67,11 +70,32 @@
           toplamaz.
         </p>
 
-        <h2>6. Üçüncü taraflar</h2>
+        <h2>6. Üçüncü taraflar ve kullanım verisi</h2>
         <p>
-          Bu sürümde reklam, ödeme veya analitik üçüncü tarafı yoktur. Google Play
-          uygulamanın dağıtımını ve (testçiler için) yüklemeyi kendi gizlilik
-          politikasına göre yönetir.
+          Oyunun nasıl oynandığını anlamak ve geliştirmek için
+          <strong>Google Firebase Analytics</strong> (Google LLC) kullanılır. Gönderilenler:
+        </p>
+        <ul>
+          <li>Oyun içi olaylar: bölüm başlatma, bitirme ve yeniden başlatma; hamle sayısı, süre, ipucu kullanımı; açılan ekranlar; öğreticinin tamamlanması</li>
+          <li>Oturum bilgisi (uygulamanın açılması, süre), uygulama sürümü, cihaz modeli, işletim sistemi sürümü, dil</li>
+          <li>IP adresinden türetilen yaklaşık konum (ülke / şehir düzeyi; IP adresinin kendisi saklanmaz)</li>
+          <li>Firebase’in uygulama kurulumuna atadığı rastgele bir kimlik (app instance ID)</li>
+        </ul>
+        <p>
+          Ad, e-posta, hesap, reklam kimliği (Advertising ID) veya Android cihaz kimliği
+          (SSAID) gönderilmez. Veriler reklam kişiselleştirmesinde kullanılmaz ve
+          satılmaz. Veriler Google sunucularında, Türkiye dışında (ör. ABD) işlenir;
+          kullanıcı düzeyindeki veriler Google Analytics saklama süresi (2 ay)
+          sonunda silinir.
+        </p>
+        <p>
+          <strong>Kapatmak için:</strong> Ayarlar → Gizlilik → “Kullanım verisi paylaş”.
+          Kapalıyken uygulama analitik verisi göndermez. Google’ın politikası:
+          <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.
+        </p>
+        <p>
+          Bu sürümde reklam veya ödeme üçüncü tarafı yoktur. Google Play uygulamanın
+          dağıtımını ve (testçiler için) yüklemeyi kendi gizlilik politikasına göre yönetir.
         </p>
 
         <h2>7. Değişiklikler</h2>
@@ -101,10 +125,13 @@
         <p>
           Cozy Quilt is a single-player packing puzzle. Progress and settings are
           stored only on your device. The app does not send that data to our servers.
+          Anonymous usage data is collected to improve the game (see section 6);
+          you can turn this off in Settings.
         </p>
         <ul>
           <li>There is no account, sign-up, or sign-in.</li>
-          <li>There is no analytics or crash-reporting SDK in this build.</li>
+          <li>Google Firebase Analytics is used for usage analytics; there is no crash-reporting SDK.</li>
+          <li>The advertising ID is not collected.</li>
           <li>There is no ads SDK; in-app products are not offered in this build.</li>
           <li>The game does not access location, contacts, photos, or the microphone.</li>
         </ul>
@@ -114,7 +141,7 @@
         <ul>
           <li>Chapter / level progress (completed levels, best moves, achievements)</li>
           <li>Daily-puzzle play history (signatures and dates needed to avoid repeats)</li>
-          <li>Preferences (haptics, theme, language)</li>
+          <li>Preferences (haptics, theme, language, usage-data sharing)</li>
           <li>An optional mid-level resume snapshot for the one active in-progress level</li>
         </ul>
         <p>
@@ -137,11 +164,31 @@
           information from them.
         </p>
 
-        <h2>6. Third parties</h2>
+        <h2>6. Third parties and usage data</h2>
         <p>
-          This version includes no advertising, payment, or analytics third party.
-          Google Play handles distribution and tester installs under Google’s own
-          privacy policy.
+          To understand how the game is played and improve it, the app uses
+          <strong>Google Firebase Analytics</strong> (Google LLC). It sends:
+        </p>
+        <ul>
+          <li>In-game events: level start, completion and restart; move count, time, hint use; screens opened; tutorial completion</li>
+          <li>Session information (app opens, duration), app version, device model, OS version, language</li>
+          <li>Approximate location derived from the IP address (country / city level; the IP address itself is not stored)</li>
+          <li>A random identifier Firebase assigns to the app installation (app instance ID)</li>
+        </ul>
+        <p>
+          No name, email, account, advertising ID, or Android device ID (SSAID) is sent.
+          The data is not used for ad personalization and is not sold. It is processed
+          on Google servers outside Türkiye (e.g. the United States); user-level data is
+          deleted after the Google Analytics retention period (2 months).
+        </p>
+        <p>
+          <strong>To turn it off:</strong> Settings → Privacy → “Share usage data”. While
+          off, the app sends no analytics data. Google’s policy:
+          <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.
+        </p>
+        <p>
+          This version includes no advertising or payment third party. Google Play
+          handles distribution and tester installs under Google’s own privacy policy.
         </p>
 
         <h2>7. Changes</h2>
