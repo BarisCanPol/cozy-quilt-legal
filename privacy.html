@@ -16,7 +16,7 @@
         <a href="terms.html">Terms</a>
       </nav>
       <p class="lang-switch"><a href="#tr">Türkçe</a> · <a href="#en">English</a></p>
-      <p class="meta">Effective / yürürlük: 2 November 2026 · package <code>com.cozyquilt.app</code></p>
+      <p class="meta">Effective / yürürlük: 8 November 2026 · package <code>com.cozyquilt.app</code></p>
     </header>
     <main>
       <section id="tr">
@@ -92,6 +92,14 @@
           <strong>Kapatmak için:</strong> Ayarlar → Gizlilik → “Kullanım verisi paylaş”.
           Kapalıyken uygulama analitik verisi göndermez. Google’ın politikası:
           <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.
+        </p>
+        <p>
+          Oyun içi özellikleri (ör. oyundaki bir seçim senaryosu) uzaktan açıp kapatmak için
+          <strong>Google Firebase Remote Config</strong> (Google LLC) kullanılır. Uygulama bu
+          anahtarları almak için Firebase’e uygulama kurulum kimliğiyle (Firebase installation ID)
+          bağlanır; kişisel veri (ad, e-posta, hesap, reklam kimliği) gönderilmez. Remote Config
+          yalnız Ayarlar → Gizlilik → “Kullanım verisi paylaş” açıkken çalışır; kapalıyken
+          uygulama ona bağlanmaz ve içindeki varsayılan anahtarları kullanır.
         </p>
         <p>
           Bu sürümde reklam veya ödeme üçüncü tarafı yoktur. Google Play uygulamanın
@@ -185,6 +193,14 @@
           <strong>To turn it off:</strong> Settings → Privacy → “Share usage data”. While
           off, the app sends no analytics data. Google’s policy:
           <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.
+        </p>
+        <p>
+          To switch in-game features on or off remotely (for example, a choice scenario in the
+          game), the app uses <strong>Google Firebase Remote Config</strong> (Google LLC). To fetch
+          these switches it contacts Firebase with the app-installation identifier (Firebase
+          installation ID); no personal data (name, email, account, advertising ID) is sent. Remote
+          Config only runs while Settings → Privacy → “Share usage data” is on; while off, the app
+          does not contact it and uses the switches built into the app.
         </p>
         <p>
           This version includes no advertising or payment third party. Google Play
